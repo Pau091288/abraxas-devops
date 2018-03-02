@@ -1,0 +1,33 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "abraxasx1",
+    "namespace": "abraxas",
+    "selfLink": "/api/v1/namespaces/abraxas/services/abraxasx1",
+    "uid": "33393658-1e4d-11e8-aaf9-0800277be061",
+    "resourceVersion": "49194",
+    "creationTimestamp": "2018-03-02T19:09:15Z",
+    "labels": {
+      "run": "abraxasx1"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 5000,
+        "targetPort": 5000
+      }
+    ],
+    "selector": {
+      "run": "abraxasx1"
+    },
+    "clusterIP": "10.105.41.240",
+    "type": "ClusterIP",
+    "sessionAffinity": "None"
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}
