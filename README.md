@@ -1,0 +1,27 @@
+#imagen en dockerhub
+pau0988/abraxas
+
+#crear un namespace
+kubectl create namespace abraxas
+
+#Para poder visualizar el dashboar de kubernetes
+kubectl dashboard
+
+#generar el deployment config a partir de la imagen en docker hub
+kubectl run abraxasx1 --namespace=abraxas --image=pau0988/abraxas --port=5000
+
+#exponer servicio
+kubectl expose deployment abraxasx1 --port=5000 --target-port=5000 --namespace=abraxas
+
+#proxy
+kubectl proxy --port=5000 --namespace=abraxas
+
+#Acceder desde proxy
+http://localhost:5000/api/v1/proxy/namespaces/abraxas/services/abraxasx1/
+
+#Archivo de deployment config
+deployment_config.json
+
+#Archivo de servicio
+service.json
+
