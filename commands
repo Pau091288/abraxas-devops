@@ -4,6 +4,9 @@ pau0988/abraxas
 #crear un namespace
 kubectl create namespace abraxas
 
+#Para poder visualizar el dashboar de kubernetes
+kubectl dashboard
+
 #generar el deployment config a partir de la imagen en docker hub
 kubectl run abraxasx1 --namespace=abraxas --image=pau0988/abraxas --port=5000
 
